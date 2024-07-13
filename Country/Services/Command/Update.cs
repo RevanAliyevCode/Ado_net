@@ -76,7 +76,7 @@ namespace Country.Services.Command
             input = Console.ReadLine();
             isSucceded = char.TryParse(input, out choice);
 
-            if (string.IsNullOrWhiteSpace(input) && !isSucceded && input!.IsValidChoice())
+            if (string.IsNullOrWhiteSpace(input) || !isSucceded || !input.IsValidChoice())
             {
                 Messages.InvalidInput();
                 goto OpinionAreaLabel;
@@ -201,7 +201,7 @@ namespace Country.Services.Command
             input = Console.ReadLine();
             isSucceded = char.TryParse(input, out choice);
 
-            if (string.IsNullOrWhiteSpace(input) && !isSucceded && input!.IsValidChoice())
+            if (string.IsNullOrWhiteSpace(input) || !isSucceded || !input.IsValidChoice())
             {
                 Messages.InvalidInput();
                 goto OpinionAreaLabel;
